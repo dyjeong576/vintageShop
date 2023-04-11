@@ -3,7 +3,10 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { AuthModule } from './auth/auth.module';
 import { ormconfig } from './entities/ormConfig';
+import { OldsSaleModule } from './olds-sale/olds-sale.module';
+import { ChatModule } from './chat/chat.module';
 
 @Module({
   imports: [
@@ -12,6 +15,9 @@ import { ormconfig } from './entities/ormConfig';
     }),
     TypeOrmModule.forRoot(ormconfig),
     TypeOrmModule.forFeature([]),
+    AuthModule,
+    OldsSaleModule,
+    ChatModule,
   ],
   controllers: [AppController],
   providers: [AppService],

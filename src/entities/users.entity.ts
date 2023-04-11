@@ -45,7 +45,7 @@ export class Users {
   @ApiProperty({ description: '전화번호' })
   @Column('varchar', { length: 30 })
   @IsString()
-  ㅔㅙㅜㄷ: string;
+  phone: string;
 
   @ApiProperty({ description: '키' })
   @Column({ type: 'int' })

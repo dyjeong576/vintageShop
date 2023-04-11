@@ -5,6 +5,7 @@ import { OldLikes } from './oldLikes.entity';
 import { Olds } from './olds.entity';
 import { Socials } from './socials.entity';
 import { Users } from './users.entity';
+import { Chats } from './chats.entity';
 
 dotenv.config();
 const ormconfig: TypeOrmModuleOptions = {
@@ -14,7 +15,7 @@ const ormconfig: TypeOrmModuleOptions = {
   username: process.env.DB_USERNAME,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_DATABASE,
-  entities: [Users, Categories, Socials, Olds, OldLikes],
+  entities: [Users, Categories, Socials, Olds, OldLikes, Chats],
   synchronize: false,
   autoLoadEntities: true,
   charset: 'utf8mb4',
